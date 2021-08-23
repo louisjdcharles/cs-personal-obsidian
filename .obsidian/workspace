@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "b3004c5714a1f349",
+        "id": "66e5463188e36cd3",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Compilers/Overview.md",
+            "file": "Compilers/Lexical Analysis.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 343
   },
   "right": {
     "id": "611d0553eadb5c70",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Compilers/Overview.md",
+                "file": "Compilers/Lexical Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,9 +86,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "b3004c5714a1f349",
+  "active": "66e5463188e36cd3",
   "lastOpenFiles": [
+    "Compilers/Lexical Analysis.md",
     "Compilers/Overview.md",
-    "Compilers/Lexical Analysis.md"
+    "Compilers/Lexical Analysis (new).md",
+    "Untitled.md"
   ]
 }

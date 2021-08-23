@@ -1,6 +1,6 @@
 # Compilers
 ## Compilation Process
-- **Lexical Analysis**
+- **[[Lexical Analysis]]**
 	- Divides the program into "tokens", similar to words in natural language.
 	- Tokens include: variable names, keywords, math + logic operators, literals
 - **Parsing**
