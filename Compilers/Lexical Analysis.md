@@ -128,3 +128,56 @@ A method to implement regular expressions
 - An NFA will accept if some of the choices lead to an accepting state (usually 1 or more)
 - Is always in a set of states
 - Are often much smaller than DFAs
+
+
+## Implementation
+The lexical analyser design pipeline:
+- Lexical Specification
+- Regular Expressions
+- NFAs
+- DFAs
+- Table driven DFA implementation
+### Converting Regular Expressions to NFAs
+- Define an NFA for each regexp
+#### NFAs for the fundamental regular expressions
+The NFA for the regexp M can be represented as:
+![[Pasted image 20210824213713.png]]
+NFA for Epsilon:
+![[Pasted image 20210824213808.png]]
+NFA for the character 'a':
+![[Pasted image 20210824213942.png]]
+NFA for AB:
+Input is passed through machine A, then B, without advancing the input
+![[Pasted image 20210824214050.png]]
+NFA for A+B:
+If either A or B finishes in an accepting state, the string will be accepted
+![[Pasted image 20210824214337.png]]
+NFA for A*:
+![[Pasted image 20210824214611.png]]
+
+### Converting NFAs to DFAs
+#### Epsilon Closure
+- The epsilon closure of state A is the set of all states that can be reached from A only following epsilon moves
+- If B is in the ε-closure of A, then all states in the ε-closure of B are also in the ε-closure of A
+#### How many different states can an NFA be in?
+- An NFA can be in many states at any time (a DFA must be in 1 state at any time)
+- If an NFA has $N$ states, $|S| \le N$, where S is the subset of all states where the NFA is in that state
+- there are $2^N - 1$ possible sets of states that the NFA can be in
+- There is a finite number of possible configuration
+#### Conversion Process
+**NFA:**
+- states: $S$
+- starting state: $s \in S$
+- final states: $F \subseteq S$
+- Transition function: $a(X) = \{y \mid x \in X \wedge x \to^a y\}$ where a is a character in the input language, and X is a set of states, gives the set of states that can be reached from the states in X using input a
+- Epsilon Closure
+
+**DFA:**
+- states: all possible non empty subsets of $S$
+- start state: Epsilon Closure of $s$, this gives all the states an NFA could be in before any input is read
+- final states: $\{X \mid X \cap F \neq 0\}$, capture every state that has at least 1 final state
+- Transition function: $X \to^a Y$ if $Y = \epsilon\text{-closure}(a(X))$
+- Is a DFA as: finite set of states, a single start state, a finite set of final states, only 1 transition per input, no epsilon moves
+
+![[Pasted image 20210824225749.png]]
+

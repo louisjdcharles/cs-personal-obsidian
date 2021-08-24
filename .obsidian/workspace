@@ -12,7 +12,20 @@
             "file": "Compilers/Lexical Analysis.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "2488e3bac7519b25"
+      },
+      {
+        "id": "acf0c2f45b08b92d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Compilers/Lexical Analysis.md",
+            "mode": "preview"
+          }
+        },
+        "group": "2488e3bac7519b25"
       }
     ],
     "direction": "vertical"
@@ -52,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 343
+    "width": 273
   },
   "right": {
     "id": "611d0553eadb5c70",
@@ -89,6 +102,10 @@
   "active": "66e5463188e36cd3",
   "lastOpenFiles": [
     "Compilers/Lexical Analysis.md",
+    "Assets/Pasted image 20210824213713.png",
+    "Compilers/Overview of the compilation process.md",
+    "Assets/Pasted image 20210824213437.png",
+    "Pasted image 20210824213437.png",
     "Compilers/Overview.md",
     "Compilers/Lexical Analysis (new).md",
     "Untitled.md"
